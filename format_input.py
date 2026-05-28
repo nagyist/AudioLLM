@@ -213,3 +213,119 @@ sorted_cards.sort(
 with open('docs/data.json', 'w', encoding='utf-8') as out:
     json.dump(sorted_cards, out, ensure_ascii=False, indent=2)
 print(f"docs/data.json written ({len(sorted_cards)} entries).")
+
+
+# ============== Server-side render of docs/index.html ==============
+# Inject pre-rendered HTML between marker comments so non-JS readers (and
+# search engines that skip JS) see the actual content. JS in app.js takes
+# over for interactive filtering after page load.
+import html as _html
+import re as _re
+
+def _h(s):
+    return _html.escape(str(s) if s is not None else "", quote=True)
+
+def _slug(s):
+    return _re.sub(r"[^a-z0-9]+", "-", str(s).lower()).strip("-")
+
+# Load star counts (built by scripts/refresh_stars.py)
+stars_by_abbrev = {}
+if os.path.exists('docs/stars.json'):
+    with open('docs/stars.json', encoding='utf-8') as f:
+        stars_by_abbrev = {k: v.get('stars', 0) for k, v in json.load(f).items()}
+
+def _card_html(card):
+    abbrev = card.get('Abbreviation', '')
+    cat = card.get('Category', '')
+    cat_slug = _slug(cat)
+    links = []
+    if card.get('Paper_Link'):
+        links.append(f'<a href="{_h(card["Paper_Link"])}" target="_blank" rel="noopener">Paper</a>')
+    if card.get('GitHub_Link'):
+        links.append(f'<a href="{_h(card["GitHub_Link"])}" target="_blank" rel="noopener">Code</a>')
+    if card.get('HF_Link'):
+        links.append(f'<a href="{_h(card["HF_Link"])}" target="_blank" rel="noopener">🤗 HF</a>')
+    if card.get('Demo_Link'):
+        links.append(f'<a href="{_h(card["Demo_Link"])}" target="_blank" rel="noopener">Demo</a>')
+    if card.get('Other_Link'):
+        links.append(f'<a href="{_h(card["Other_Link"])}" target="_blank" rel="noopener">Site</a>')
+    tags = [f'<span class="tag tag-cat" data-cat="{cat_slug}">{_h(cat)}</span>']
+    if card.get('Type') and card['Type'] != cat:
+        tags.append(f'<span class="tag">{_h(card["Type"])}</span>')
+    if card.get('Audio_Input') == 'Yes':
+        tags.append('<span class="tag">Audio In</span>')
+    if card.get('Audio_Output') == 'Yes':
+        tags.append('<span class="tag">Audio Out</span>')
+    if card.get('Language') and card['Language'] not in ('-', ''):
+        tags.append(f'<span class="tag">{_h(card["Language"])}</span>')
+    stars = stars_by_abbrev.get(abbrev, 0)
+    star_badge = f'<span class="card-stars" title="GitHub stars">★ {stars:,}</span>' if stars else ''
+    affil = card.get('Affiliation', '')
+    desc = card.get('Description', '')
+    return (
+        f'<article class="card" data-abbrev="{_h(abbrev)}" data-cat="{cat_slug}" data-stars="{stars}">'
+        f'<header class="card-head"><span class="card-abbrev">{_h(abbrev)}</span>'
+        f'<span class="card-time">{_h(card.get("Time", ""))}</span></header>'
+        f'<p class="card-title">{_h(card.get("Title", ""))}</p>'
+        + (f'<p class="card-affil">{_h(affil)}</p>' if affil else '')
+        + f'<div class="tags">{"".join(tags)}{star_badge}</div>'
+        + (f'<p class="card-desc">{_h(desc)}</p>' if desc else '')
+        + f'<footer class="card-links">{"".join(links)}</footer>'
+        '</article>'
+    )
+
+# Featured = top 8 by stars (entries with no Github link are excluded from featured)
+featured = [c for c in sorted_cards if stars_by_abbrev.get(c.get('Abbreviation', ''), 0) > 0]
+featured.sort(key=lambda c: -stars_by_abbrev.get(c.get('Abbreviation', ''), 0))
+featured = featured[:8]
+featured_html = '\n'.join(_card_html(c) for c in featured)
+
+# Main grid: all entries, newest first (sorted_cards already in that order)
+grid_html = '\n'.join(_card_html(c) for c in sorted_cards)
+
+# Stats line
+total = len(sorted_cards)
+n_cats = len({c.get('Category', '') for c in sorted_cards})
+latest = max(c.get('Time', '') for c in sorted_cards) if sorted_cards else '—'
+stats_html = (
+    f'<div class="stat"><strong>{total}</strong>entries</div>'
+    f'<div class="stat"><strong>{n_cats}</strong>categories</div>'
+    f'<div class="stat"><strong>{latest}</strong>latest</div>'
+)
+
+# Category chips, ordered the same way the README sections are ordered
+cat_counts = {}
+for c in sorted_cards:
+    cat_counts[c.get('Category', '')] = cat_counts.get(c.get('Category', ''), 0) + 1
+preferred_order = [
+    "Model and Methods", "Speech Recognition", "Speech Synthesis",
+    "Audio Generation", "Benchmark", "Dataset Resource", "Multimodal",
+    "Survey", "Study", "Safety", "Chatbot",
+]
+ordered_cats = [c for c in preferred_order if c in cat_counts] + \
+               [c for c in cat_counts if c not in preferred_order]
+chips_html = ''.join(
+    f'<button class="chip" type="button" data-category="{_h(c)}" data-cat="{_slug(c)}" aria-pressed="false">'
+    f'{_h(c)}<span class="count">{cat_counts[c]}</span></button>'
+    for c in ordered_cats
+)
+
+# Inject into docs/index.html between marker pairs
+with open('docs/index.html', encoding='utf-8') as f:
+    page = f.read()
+
+def _inject(html_text, marker, content):
+    pattern = _re.compile(
+        rf'(<!-- {marker}-START -->).*?(<!-- {marker}-END -->)',
+        flags=_re.DOTALL,
+    )
+    return pattern.sub(lambda m: m.group(1) + content + m.group(2), html_text)
+
+page = _inject(page, 'AUTO-STATS', stats_html)
+page = _inject(page, 'AUTO-CATEGORY-FILTER', chips_html)
+page = _inject(page, 'AUTO-FEATURED', featured_html)
+page = _inject(page, 'AUTO-GRID', grid_html)
+
+with open('docs/index.html', 'w', encoding='utf-8') as f:
+    f.write(page)
+print(f"docs/index.html SSR'd (featured: {len(featured)}, grid: {len(sorted_cards)}).")

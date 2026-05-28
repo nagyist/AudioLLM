@@ -1,4 +1,4 @@
-name: check README sync
+name: check README + docs sync
 
 on:
   pull_request:
@@ -6,6 +6,9 @@ on:
       - 'items/**'
       - 'format_input.py'
       - 'README.md'
+      - 'docs/index.html'
+      - 'docs/data.json'
+      - 'docs/stars.json'
       - '.github/workflows/check-readme-sync.yml'
 
 jobs:
@@ -22,16 +25,23 @@ jobs:
       - name: Install deps
         run: pip install matplotlib==3.10.0 numpy==2.1.3
 
-      - name: Regenerate README.md and diff
+      - name: Regenerate README.md + docs/index.html + docs/data.json and diff
         run: |
           python3 format_input.py
-          if ! git diff --quiet -- README.md; then
-            echo '::error::README.md is out of sync with items/*.json.'
+          drift=0
+          for f in README.md docs/index.html docs/data.json; do
+            if ! git diff --quiet -- "$f"; then
+              echo "::error file=$f::$f is out of sync with items/*.json (and/or docs/stars.json)."
+              echo ''
+              echo "--- diff (first 100 lines of $f) ---"
+              git diff -- "$f" | head -100
+              drift=1
+            fi
+          done
+          if [ "$drift" -eq 0 ]; then
+            echo 'OK: README.md, docs/index.html, docs/data.json all in sync.'
+          else
             echo ''
-            echo 'Run `python3 format_input.py` locally and commit the regenerated README.md (and model_release_timeline_vertical_listed.png) before pushing.'
-            echo ''
-            echo '--- diff (first 200 lines) ---'
-            git diff -- README.md | head -200
+            echo 'Run `python3 format_input.py` locally and commit the regenerated files before pushing.'
             exit 1
           fi
-          echo 'OK: README.md matches the canonical regeneration from items/*.json.'
