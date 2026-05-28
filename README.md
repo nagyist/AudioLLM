@@ -2,7 +2,7 @@
 
 **The hub for audio AI research.** Curated papers, open models, benchmarks and datasets across audio LLMs · speech recognition · speech synthesis · music & audio generation.
 
-`96 entries` · `11 categories` · `latest: 2025-12`
+`112 entries` · `11 categories` · `latest: 2026-04`
 
 👉 **[Interactive site (search & filter)](https://binwang28.github.io/audio-ai-hub/)** · **[Contribute](CONTRIBUTING.md)** · **[Suggest a paper](https://github.com/BinWang28/audio-ai-hub/issues/new?template=add-paper.yml)**
 
@@ -31,24 +31,35 @@ and You!
 - [Multimodal](#multimodal)
 - [Safety](#safety)
 - [Speech Synthesis](#speech-synthesis)
-- [Speech Recognition](#speech-recognition)
 - [Chatbot](#chatbot)
+- [Speech Recognition](#speech-recognition)
 
 <img src="model_release_timeline_vertical_listed.png" alt="Timeline Visualization" width="600">
 
 ### Abbreviations with Links
+- [MiniCPM-o](https://arxiv.org/abs/2604.27393)
 - [Fun-ASR-Nano](https://arxiv.org/abs/2509.12508)
+- [Qwen3-Omni](https://arxiv.org/abs/2509.17765)
 - [ACORN](https://arxiv.org/abs/2506.08524)
+- [Audio Flamingo 3](https://arxiv.org/abs/2507.08128)
 - [DIFFA](https://arxiv.org/abs/2507.18452)
+- [OpenS2S](https://arxiv.org/abs/2507.05177)
+- [Step-Audio 2](https://arxiv.org/abs/2507.16632)
+- [Voxtral](https://arxiv.org/abs/2507.13264)
 - [CMI-Bench](https://arxiv.org/abs/2506.12285)
 - [PAL](https://arxiv.org/abs/2506.10423)
+- [CosyVoice 3](https://arxiv.org/abs/2505.17589)
 - [LALM-Temporal-Bench](https://arxiv.org/abs/2505.13115)
 - [MMAR](https://arxiv.org/abs/2505.13032)
+- [Kimi-Audio](https://arxiv.org/abs/2504.18425)
 - [Audio Flamingo 2](https://arxiv.org/abs/2503.03983)
 - [Audio-Reasoner](https://arxiv.org/abs/2503.02318)
+- [FireRedTTS](https://arxiv.org/abs/2503.20499)
 - [Full-Duplex-Bench](https://arxiv.org/abs/2503.04721)
 - [Phi-4-Mini](https://arxiv.org/abs/2503.01743)
+- [Qwen2.5-Omni](https://arxiv.org/abs/2503.20215)
 - [Audio-FLAN](https://arxiv.org/abs/2502.16584)
+- [IndexTTS](https://arxiv.org/abs/2502.05512)
 - [OSUM](https://arxiv.org/pdf/2501.13306)
 - [OWLS](https://arxiv.org/abs/2502.10373)
 - [Step-Audio](https://arxiv.org/abs/2502.11946)
@@ -58,6 +69,8 @@ and You!
 - [LUCY](https://arxiv.org/abs/2501.16327)
 - [UltraEval-Audio](https://github.com/OpenBMB/UltraEval-Audio)
 - [ADU-Bench](https://arxiv.org/abs/2412.05167)
+- [CosyVoice 2](https://arxiv.org/abs/2412.10117)
+- [GLM-4-Voice](https://arxiv.org/abs/2412.02612)
 - [MERaLiON-AudioLLM](https://arxiv.org/abs/2412.09818)
 - [Typhoon2-Audio](https://arxiv.org/abs/2412.13702)
 - [TalkArena](https://talkarena.org/)
@@ -77,6 +90,7 @@ and You!
 - [DeSTA2](https://arxiv.org/pdf/2409.20007)
 - [EMOVA](https://arxiv.org/pdf/2409.18042)
 - [LLaMA-Omni](https://arxiv.org/pdf/2409.06666v1)
+- [MaskGCT](https://arxiv.org/abs/2409.00750)
 - [MoWE-Audio](https://arxiv.org/pdf/2409.06635)
 - [Moshi](https://arxiv.org/pdf/2410.00037)
 - [SALMon](https://arxiv.org/abs/2409.07437)
@@ -85,6 +99,7 @@ and You!
 - [MooER](https://arxiv.org/pdf/2408.05101)
 - [MuChoMusic](https://arxiv.org/abs/2408.01337)
 - [Typhoon-Audio](https://arxiv.org/abs/2409.10999)
+- [VITA](https://arxiv.org/abs/2408.05211)
 - [AudioEntailment](https://arxiv.org/pdf/2407.18062)
 - [CompA](https://arxiv.org/abs/2310.08753)
 - [Decoder-only LLMs for STT](https://arxiv.org/pdf/2407.03169)
@@ -97,6 +112,7 @@ and You!
 - [AudioBench](https://arxiv.org/abs/2406.16020)
 - [CodecFake](https://arxiv.org/abs/2406.07237)
 - [DeSTA](https://arxiv.org/abs/2406.18871)
+- [E2 TTS](https://arxiv.org/abs/2406.18009)
 - [MusiLingo](https://arxiv.org/pdf/2309.08730)
 - [SD-Eval](https://arxiv.org/pdf/2406.13340)
 - [Speech ReaLLM](https://arxiv.org/pdf/2406.09569)
@@ -142,10 +158,22 @@ and You!
   - [![GitHub stars](https://img.shields.io/github/stars/FunAudioLLM/Fun-ASR?style=social)](https://github.com/FunAudioLLM/Fun-ASR)
   - [Paper](https://arxiv.org/abs/2509.12508) / [Hugging Face Model](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512) / [Demo](https://huggingface.co/spaces/FunAudioLLM/Fun-ASR-Nano)
 
+- `【2025-09】-【Qwen3-Omni】-【Qwen Team, Alibaba Group】-【Type: Omni-Modal LLM】`
+  - **Qwen3-Omni Technical Report**
+  - **Author(s):** Qwen Team (Jin Xu, Zhifang Guo, Hangrui Hu, Yunfei Chu, Xiong Wang, Jinzheng He, Yuxuan Wang, et al.)
+  - [![GitHub stars](https://img.shields.io/github/stars/QwenLM/Qwen3-Omni?style=social)](https://github.com/QwenLM/Qwen3-Omni)
+  - [Paper](https://arxiv.org/abs/2509.17765) / [Hugging Face Model](https://huggingface.co/collections/Qwen/qwen3-omni)
+
 - `【2025-07】-【ACORN】-【NIO】-【Type: Model】`
   - **Teaching Physical Awareness to LLMs through Sounds**
   - **Author(s):** Weiguo Wang, Andy Nie, Wenrui Zhou, Yi Kai, Chengchen Hu
   - [Paper](https://arxiv.org/abs/2506.08524) / [Other Link](https://icml.cc/virtual/2025/poster/46139)
+
+- `【2025-07】-【Audio Flamingo 3】-【NVIDIA】-【Type: Audio LLM】`
+  - **Audio Flamingo 3: Advancing Audio Intelligence with Fully Open Large Audio Language Models**
+  - **Author(s):** Arushi Goel, Sreyan Ghosh, Jaehyeon Kim, Sonal Kumar, Zhifeng Kong, Sang-gil Lee, Chao-Han Huck Yang, Ramani Duraiswami, Dinesh Manocha, Rafael Valle, Bryan Catanzaro
+  - [![GitHub stars](https://img.shields.io/github/stars/NVIDIA/audio-flamingo?style=social)](https://github.com/NVIDIA/audio-flamingo)
+  - [Paper](https://arxiv.org/abs/2507.08128) / [Hugging Face Model](https://huggingface.co/nvidia/audio-flamingo-3) / [Demo](https://research.nvidia.com/labs/adlr/AF3/)
 
 - `【2025-07】-【DIFFA】-【Nankai University (NKU-HLT)】-【Type: Model】`
   - **DIFFA: Large Language Diffusion Models Can Listen and Understand**
@@ -153,11 +181,23 @@ and You!
   - [![GitHub stars](https://img.shields.io/github/stars/NKU-HLT/DIFFA?style=social)](https://github.com/NKU-HLT/DIFFA)
   - [Paper](https://arxiv.org/abs/2507.18452)
 
+- `【2025-07】-【Step-Audio 2】-【Step-Audio Team, StepFun】-【Type: Audio LLM】`
+  - **Step-Audio 2 Technical Report**
+  - **Author(s):** Step-Audio Team (Boyong Wu, Chao Yan, Chen Hu, Cheng Yi, Chengli Feng, Fei Tian, Feiyu Shen, Gang Li, et al.)
+  - [![GitHub stars](https://img.shields.io/github/stars/stepfun-ai/Step-Audio2?style=social)](https://github.com/stepfun-ai/Step-Audio2)
+  - [Paper](https://arxiv.org/abs/2507.16632) / [Hugging Face Model](https://huggingface.co/stepfun-ai)
+
 - `【2025-06】-【PAL】-【CVSSP,PAI@University of Surrey UK, MBZUAI Abu Dhabi】-【Type: Model】`
   - **PAL: Probing Audio Encoders via LLMs - A Study of Information Transfer from Audio Encoders to LLMs**
   - **Author(s):** Tony Alex, Wish Suharitdamrong, Sara Atito, Armin Mustafa, Philip J. B. Jackson, Imran Razzak, Muhammad Awais
   - [![GitHub stars](https://img.shields.io/github/stars/ta012/PAL-AudioLLM?style=social)](https://github.com/ta012/PAL-AudioLLM)
   - [Paper](https://arxiv.org/abs/2506.10423) / [Other Link](https://ta012.github.io/PAL/)
+
+- `【2025-04】-【Kimi-Audio】-【Moonshot AI】-【Type: Audio LLM】`
+  - **Kimi-Audio Technical Report**
+  - **Author(s):** KimiTeam (Ding Ding, Zeqian Ju, Yichong Leng, Songxiang Liu, Tong Liu, Zeyu Shang, et al.)
+  - [![GitHub stars](https://img.shields.io/github/stars/MoonshotAI/Kimi-Audio?style=social)](https://github.com/MoonshotAI/Kimi-Audio)
+  - [Paper](https://arxiv.org/abs/2504.18425) / [Hugging Face Model](https://huggingface.co/moonshotai/Kimi-Audio-7B-Instruct)
 
 - `【2025-03】-【Audio Flamingo 2】-【NVIDIA, University of Maryland】-【Type: Model】`
   - **Audio Flamingo 2: An Audio-Language Model with Long-Audio Understanding and Expert Reasoning Abilities**
@@ -176,6 +216,12 @@ and You!
   - **Author(s):** Microsoft Phi-4-Mini Team
   - [![GitHub stars](https://img.shields.io/github/stars/microsoft/Phi-4?style=social)](https://github.com/microsoft/Phi-4)
   - [Paper](https://arxiv.org/abs/2503.01743) / [Hugging Face Model](https://huggingface.co/microsoft/Phi-4-multimodal-instruct)
+
+- `【2025-03】-【Qwen2.5-Omni】-【Qwen Team, Alibaba Group】-【Type: Omni-Modal LLM】`
+  - **Qwen2.5-Omni Technical Report**
+  - **Author(s):** Qwen Team (Jin Xu, Zhifang Guo, Jinzheng He, Hangrui Hu, Ting He, Shuai Bai, Keqin Chen, et al.)
+  - [![GitHub stars](https://img.shields.io/github/stars/QwenLM/Qwen2.5-Omni?style=social)](https://github.com/QwenLM/Qwen2.5-Omni)
+  - [Paper](https://arxiv.org/abs/2503.20215) / [Hugging Face Model](https://huggingface.co/Qwen/Qwen2.5-Omni-7B) / [Demo](https://huggingface.co/spaces/Qwen/Qwen2.5-Omni-7B-Demo)
 
 - `【2025-02】-【OSUM】-【ASLP@NPU】-【Type: Model】`
   - **OSUM: Advancing Open Speech Understanding Models with Limited Resources in Academia**
@@ -628,10 +674,22 @@ and You!
 
 ## Multimodal
 
+- `【2026-04】-【MiniCPM-o】-【ModelBest (OpenBMB), Tsinghua University】-【Type: Omni-Modal LLM】`
+  - **MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction**
+  - **Author(s):** Junbo Cui, Bokai Xu, Chongyi Wang, Tianyu Yu, Weiyue Sun, Yingjing Xu, et al.
+  - [![GitHub stars](https://img.shields.io/github/stars/OpenBMB/MiniCPM-o?style=social)](https://github.com/OpenBMB/MiniCPM-o)
+  - [Paper](https://arxiv.org/abs/2604.27393) / [Hugging Face Model](https://huggingface.co/openbmb/MiniCPM-o-2_6)
+
 - `【2024-09】-【EMOVA】-【HKUST】-【Type: Model】`
   - **EMOVA: Empowering Language Models to See, Hear and Speak with Vivid Emotions**
   - **Author(s):** Kai Chen, Yunhao Gou, Runhui Huang, Zhili Liu, Daxin Tan, Jing Xu, Chunwei Wang, Yi Zhu, Yihan Zeng, Kuo Yang, Dingdong Wang, Kun Xiang, Haoyuan Li, Haoli Bai, Jianhua Han, Xiaohui Li, Weike Jin, Nian Xie, Yu Zhang, James T. Kwok, Hengshuang Zhao, Xiaodan Liang, Dit-Yan Yeung, Xiao Chen, Zhenguo Li, Wei Zhang, Qun Liu, Jun Yao, Lanqing Hong, Lu Hou, Hang Xu
   - [Paper](https://arxiv.org/pdf/2409.18042) / [Demo](https://emova-ollm.github.io/)
+
+- `【2024-08】-【VITA】-【Tencent Youtu Lab, Nanjing University, Xiamen University】-【Type: Omni-Modal LLM】`
+  - **VITA: Towards Open-Source Interactive Omni Multimodal LLM**
+  - **Author(s):** Chaoyou Fu, Haojia Lin, Zuwei Long, Yunhang Shen, Yuhang Dai, Meng Zhao, Yi-Fan Zhang, Ke Li, Xiawu Zheng, Rongrong Ji
+  - [![GitHub stars](https://img.shields.io/github/stars/VITA-MLLM/VITA?style=social)](https://github.com/VITA-MLLM/VITA)
+  - [Paper](https://arxiv.org/abs/2408.05211) / [Hugging Face Model](https://huggingface.co/VITA-MLLM/VITA) / [Demo](https://vita-home.github.io/)
 
 - `【2023-11】-【CoDi-2】-【UC Berkeley】-【Type: Model】`
   - **CoDi-2: In-Context, Interleaved, and Interactive Any-to-Any Generation**
@@ -661,11 +719,46 @@ and You!
 
 ## Speech Synthesis
 
+- `【2025-05】-【CosyVoice 3】-【FunAudioLLM Team, Tongyi Lab, Alibaba Group】-【Type: TTS Model】`
+  - **CosyVoice 3: Towards In-the-wild Speech Generation via Scaling-up and Post-training**
+  - **Author(s):** Zhihao Du, Changfeng Gao, Yuxuan Wang, Fan Yu, Tianyu Zhao, Hao Wang, Xiang Lv, Hui Wang, Xian Shi, Keyu An, Guanrou Yang, Yabin Li, Yanni Chen, Zhifu Gao, Qian Chen, Yue Gu, Mengzhe Chen, Yafeng Chen, Shiliang Zhang, Wen Wang, Jieping Ye
+  - [![GitHub stars](https://img.shields.io/github/stars/FunAudioLLM/CosyVoice?style=social)](https://github.com/FunAudioLLM/CosyVoice)
+  - [Paper](https://arxiv.org/abs/2505.17589) / [Hugging Face Model](https://huggingface.co/FunAudioLLM) / [Demo](https://funaudiollm.github.io/cosyvoice3/)
+
+- `【2025-03】-【FireRedTTS】-【FireRed Team, Xiaohongshu】-【Type: TTS Model】`
+  - **FireRedTTS-1S: An Upgraded Streamable Foundation Text-to-Speech System**
+  - **Author(s):** Hao-Han Guo, Yao Hu, Fei-Yu Shen, Xu Tang, Yi-Chen Wu, Feng-Long Xie, Kun Xie
+  - [![GitHub stars](https://img.shields.io/github/stars/FireRedTeam/FireRedTTS?style=social)](https://github.com/FireRedTeam/FireRedTTS)
+  - [Paper](https://arxiv.org/abs/2503.20499) / [Hugging Face Model](https://huggingface.co/FireRedTeam) / [Demo](https://fireredteam.github.io/demos/firered_tts_1s/)
+
+- `【2025-02】-【IndexTTS】-【Bilibili】-【Type: TTS Model】`
+  - **IndexTTS: An Industrial-Level Controllable and Efficient Zero-Shot Text-To-Speech System**
+  - **Author(s):** Wei Deng, Siyi Zhou, Jingchen Shu, Jinchao Wang, Lu Wang
+  - [![GitHub stars](https://img.shields.io/github/stars/index-tts/index-tts?style=social)](https://github.com/index-tts/index-tts)
+  - [Paper](https://arxiv.org/abs/2502.05512) / [Hugging Face Model](https://huggingface.co/IndexTeam) / [Demo](https://index-tts.github.io/)
+
+- `【2024-12】-【CosyVoice 2】-【FunAudioLLM Team, Tongyi Lab, Alibaba Group】-【Type: TTS Model】`
+  - **CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models**
+  - **Author(s):** Zhihao Du, Yuxuan Wang, Qian Chen, Xian Shi, Xiang Lv, Tianyu Zhao, Zhifu Gao, Yexin Yang, Changfeng Gao, Hui Wang, Fan Yu, Huadai Liu, Zhengyan Sheng, Yue Gu, Chong Deng, Wen Wang, Shiliang Zhang, Zhijie Yan, Jingren Zhou
+  - [![GitHub stars](https://img.shields.io/github/stars/FunAudioLLM/CosyVoice?style=social)](https://github.com/FunAudioLLM/CosyVoice)
+  - [Paper](https://arxiv.org/abs/2412.10117) / [Hugging Face Model](https://huggingface.co/FunAudioLLM/CosyVoice2-0.5B) / [Demo](https://funaudiollm.github.io/cosyvoice2/)
+
 - `【2024-10】-【F5-TTS】-【Shanghai Jiao Tong University】-【Type: TTS Model】`
   - **F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching**
   - **Author(s):** Yushen Chen, Zhikang Niu, Ziyang Ma, Keqi Deng, Chunhui Wang, Jian Zhao, Kai Yu, Xie Chen
   - [![GitHub stars](https://img.shields.io/github/stars/SWivid/F5-TTS?style=social)](https://github.com/SWivid/F5-TTS)
   - [Paper](https://arxiv.org/abs/2410.06885) / [Hugging Face Model](https://huggingface.co/SWivid/F5-TTS) / [Demo](https://swivid.github.io/F5-TTS/)
+
+- `【2024-09】-【MaskGCT】-【The Chinese University of Hong Kong (Shenzhen), Amphion】-【Type: TTS Model】`
+  - **MaskGCT: Zero-Shot Text-to-Speech with Masked Generative Codec Transformer**
+  - **Author(s):** Yuancheng Wang, Haoyue Zhan, Liwei Liu, Ruihong Zeng, Haotian Guo, Jiachen Zheng, Qiang Zhang, Xueyao Zhang, Shunsi Zhang, Zhizheng Wu
+  - [![GitHub stars](https://img.shields.io/github/stars/tts/maskgct?style=social)](https://github.com/open-mmlab/Amphion/tree/main/models/tts/maskgct)
+  - [Paper](https://arxiv.org/abs/2409.00750) / [Hugging Face Model](https://huggingface.co/amphion/MaskGCT) / [Demo](https://maskgct.github.io/)
+
+- `【2024-06】-【E2 TTS】-【Microsoft】-【Type: TTS Model】`
+  - **E2 TTS: Embarrassingly Easy Fully Non-Autoregressive Zero-Shot TTS**
+  - **Author(s):** Sefik Emre Eskimez, Xiaofei Wang, Manthan Thakker, Canrun Li, Chung-Hsien Tsai, Zhen Xiao, Hemin Yang, Zirun Zhu, Min Tang, Xu Tan, Yanqing Liu, Sheng Zhao, Naoyuki Kanda
+  - [Paper](https://arxiv.org/abs/2406.18009) / [Demo](https://www.microsoft.com/en-us/research/project/e2-tts/)
 
 - `【2023-06】-【StyleTTS 2】-【Columbia University】-【Type: TTS Model】`
   - **StyleTTS 2: Towards Human-Level Text-to-Speech through Style Diffusion and Adversarial Training with Large Speech Language Models**
@@ -679,7 +772,31 @@ and You!
   - [![GitHub stars](https://img.shields.io/github/stars/master/valle?style=social)](https://github.com/microsoft/unilm/tree/master/valle)
   - [Paper](https://arxiv.org/abs/2301.02111) / [Demo](https://www.microsoft.com/en-us/research/project/vall-e-x/)
 
+## Chatbot
+
+- `【2025-07】-【OpenS2S】-【CASIA】-【Type: Spoken Dialogue Model】`
+  - **OpenS2S: Advancing Fully Open-Source End-to-End Empathetic Large Speech Language Model**
+  - **Author(s):** Chen Wang, Tianyu Peng, Wen Yang, Yinan Bai, Guangfu Wang, Jun Lin, Lanpeng Jia, et al.
+  - [![GitHub stars](https://img.shields.io/github/stars/CASIA-LM/OpenS2S?style=social)](https://github.com/CASIA-LM/OpenS2S)
+  - [Paper](https://arxiv.org/abs/2507.05177)
+
+- `【2025-01】-【MinMo】-【FunAudioLLM Team, Tongyi Lab, Alibaba Group】-【Type: Multimodal Large Language Model】`
+  - **MinMo: A Multimodal Large Language Model for Seamless Voice Interaction**
+  - **Author(s):** Qian Chen, Yafeng Chen, Yanni Chen, Mengzhe Chen, Yingda Chen, Chong Deng, Zhihao Du, Ruize Gao, Changfeng Gao, Zhifu Gao, Yabin Li, Xiang Lv, Jiaqing Liu, Haoneng Luo, Bin Ma, Chongjia Ni, Xian Shi, Jialong Tang, Hui Wang, Hao Wang, Wen Wang, Yuxuan Wang, Yunlan Xu, Fan Yu, Zhijie Yan, Yexin Yang, Baosong Yang, Xian Yang, Guanrou Yang, Tianyu Zhao, Qinglin Zhang, Shiliang Zhang, Nan Zhao, Pei Zhang, Chong Zhang, Jinren Zhou
+  - [Paper](https://arxiv.org/abs/2501.06282) / [Other Link](https://funaudiollm.github.io/minmo)
+
+- `【2024-12】-【GLM-4-Voice】-【Zhipu AI, Tsinghua University】-【Type: Spoken Dialogue Model】`
+  - **GLM-4-Voice: Towards Intelligent and Human-Like End-to-End Spoken Chatbot**
+  - **Author(s):** Aohan Zeng, Zhengxiao Du, Mingdao Liu, Kedong Wang, Shengmin Jiang, Lei Zhao, Yuxiao Dong, Jie Tang
+  - [![GitHub stars](https://img.shields.io/github/stars/THUDM/GLM-4-Voice?style=social)](https://github.com/THUDM/GLM-4-Voice)
+  - [Paper](https://arxiv.org/abs/2412.02612) / [Hugging Face Model](https://huggingface.co/THUDM/glm-4-voice-9b)
+
 ## Speech Recognition
+
+- `【2025-07】-【Voxtral】-【Mistral AI】-【Type: Audio Understanding Model】`
+  - **Voxtral**
+  - **Author(s):** Mistral AI (Alexander H. Liu, Andy Ehrenberg, Andy Lo, Clément Denoix, Corentin Barreau, et al.)
+  - [Paper](https://arxiv.org/abs/2507.13264) / [Hugging Face Model](https://huggingface.co/mistralai/Voxtral-Mini-3B-2507) / [Other Link](https://mistral.ai/news/voxtral/)
 
 - `【2023-08】-【SeamlessM4T】-【Meta AI】-【Type: Speech Translation Model】`
   - **SeamlessM4T: Massively Multilingual & Multimodal Machine Translation**
@@ -698,10 +815,3 @@ and You!
   - **Author(s):** Alec Radford, Jong Wook Kim, Tao Xu, Greg Brockman, Christine McLeavey, Ilya Sutskever
   - [![GitHub stars](https://img.shields.io/github/stars/openai/whisper?style=social)](https://github.com/openai/whisper)
   - [Paper](https://arxiv.org/abs/2212.04356) / [Hugging Face Model](https://huggingface.co/openai/whisper-large-v3)
-
-## Chatbot
-
-- `【2025-01】-【MinMo】-【FunAudioLLM Team, Tongyi Lab, Alibaba Group】-【Type: Multimodal Large Language Model】`
-  - **MinMo: A Multimodal Large Language Model for Seamless Voice Interaction**
-  - **Author(s):** Qian Chen, Yafeng Chen, Yanni Chen, Mengzhe Chen, Yingda Chen, Chong Deng, Zhihao Du, Ruize Gao, Changfeng Gao, Zhifu Gao, Yabin Li, Xiang Lv, Jiaqing Liu, Haoneng Luo, Bin Ma, Chongjia Ni, Xian Shi, Jialong Tang, Hui Wang, Hao Wang, Wen Wang, Yuxuan Wang, Yunlan Xu, Fan Yu, Zhijie Yan, Yexin Yang, Baosong Yang, Xian Yang, Guanrou Yang, Tianyu Zhao, Qinglin Zhang, Shiliang Zhang, Nan Zhao, Pei Zhang, Chong Zhang, Jinren Zhou
-  - [Paper](https://arxiv.org/abs/2501.06282) / [Other Link](https://funaudiollm.github.io/minmo)
