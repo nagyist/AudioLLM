@@ -4,7 +4,7 @@
 
 `96 entries` · `11 categories` · `latest: 2025-12`
 
-👉 **[Interactive site (search & filter)](https://binwang28.github.io/audio-ai-hub/)** · **[Contribute](CONTRIBUTING.md)** · **[Suggest a paper](https://github.com/AudioLLMs/Awesome-Audio-LLM/issues/new?template=add-paper.yml)**
+👉 **[Interactive site (search & filter)](https://binwang28.github.io/audio-ai-hub/)** · **[Contribute](CONTRIBUTING.md)** · **[Suggest a paper](https://github.com/BinWang28/audio-ai-hub/issues/new?template=add-paper.yml)**
 
 ---
 
@@ -20,7 +20,7 @@ We thank the following contributors for their valuable contributions!
 [czwxian](https://github.com/czwxian), 
 [marianasignal](https://github.com/marianasignal), 
 and You!
-[![Star History Chart](https://api.star-history.com/svg?repos=AudioLLMs/Awesome-Audio-LLM&type=Date)](https://star-history.com/#AudioLLMs/Awesome-Audio-LLM&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=BinWang28/audio-ai-hub&type=Date)](https://star-history.com/#BinWang28/audio-ai-hub&Date)
 ## Table of Contents
 - [Model and Methods](#model-and-methods)
 - [Benchmark](#benchmark)

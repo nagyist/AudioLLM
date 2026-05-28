@@ -103,7 +103,7 @@ _n_cat = len(categories)
 _latest = max(card["Time"] for card in model_cards)
 readme_lines.append(f"`{_total} entries` · `{_n_cat} categories` · `latest: {_latest}`")
 readme_lines.append("")
-readme_lines.append("👉 **[Interactive site (search & filter)](https://binwang28.github.io/audio-ai-hub/)** · **[Contribute](CONTRIBUTING.md)** · **[Suggest a paper](https://github.com/AudioLLMs/Awesome-Audio-LLM/issues/new?template=add-paper.yml)**")
+readme_lines.append("👉 **[Interactive site (search & filter)](https://binwang28.github.io/audio-ai-hub/)** · **[Contribute](CONTRIBUTING.md)** · **[Suggest a paper](https://github.com/BinWang28/audio-ai-hub/issues/new?template=add-paper.yml)**")
 readme_lines.append("")
 readme_lines.append("---")
 readme_lines.append("")
@@ -121,7 +121,7 @@ readme_lines.append("[czwxian](https://github.com/czwxian), ")
 readme_lines.append("[marianasignal](https://github.com/marianasignal), ")
 readme_lines.append("and You!")
 
-readme_lines.append("[![Star History Chart](https://api.star-history.com/svg?repos=AudioLLMs/Awesome-Audio-LLM&type=Date)](https://star-history.com/#AudioLLMs/Awesome-Audio-LLM&Date)")
+readme_lines.append("[![Star History Chart](https://api.star-history.com/svg?repos=BinWang28/audio-ai-hub&type=Date)](https://star-history.com/#BinWang28/audio-ai-hub&Date)")
 
 
 

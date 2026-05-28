@@ -1,11 +1,12 @@
-cff-version: 0.1.0
-message: "If you refer to this GitHub, please cite it as below."
+cff-version: 1.2.0
+message: "If you find this hub useful, please cite it as below."
+type: software
+title: "audio-ai-hub: a curated hub for audio AI research"
 authors:
-- family-names: "AudioLLM"
-  given-names: "Singapore"
-title: "AudioLLM Survey"
-version: 0.1.0
-doi: None
+  - family-names: Wang
+    given-names: Bin
+    orcid: ""
+repository-code: "https://github.com/BinWang28/audio-ai-hub"
+url: "https://github.com/BinWang28/audio-ai-hub"
 date-released: 2024-10-23
-url: "https://github.com/AudioLLMs/AudioLLM"
-
+license: MIT
