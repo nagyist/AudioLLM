@@ -28,6 +28,9 @@
       "type": "string",
       "enum": [
         "Model and Methods",
+        "Speech Recognition",
+        "Speech Synthesis",
+        "Audio Generation",
         "Benchmark",
         "Dataset Resource",
         "Safety",
@@ -36,7 +39,7 @@
         "Study",
         "Chatbot"
       ],
-      "description": "Top-level README section. Must be one of the eight canonical categories."
+      "description": "Top-level README section. Must be one of the canonical categories."
     },
     "Type": {
       "type": "string",

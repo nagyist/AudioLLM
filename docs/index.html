@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>audio-ai-hub — the hub for audio AI research</title>
+  <meta name="description" content="A curated hub for audio AI research: audio LLMs, speech recognition, TTS, music generation, benchmarks, datasets." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='4' y='52' font-size='52'%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-brand">
+        <span class="brand-mark">🎧</span>
+        <span class="brand-text">audio-ai-hub</span>
+      </div>
+      <h1 class="hero-tagline">The hub for audio AI research.</h1>
+      <p class="hero-sub">
+        Papers, open models, benchmarks and datasets across
+        <strong>audio LLMs · speech recognition · speech synthesis · music &amp; audio generation</strong>.
+      </p>
+      <div class="hero-stats" id="hero-stats"></div>
+      <div class="hero-cta">
+        <a class="cta cta-primary" href="https://github.com/AudioLLMs/Awesome-Audio-LLM">GitHub</a>
+        <a class="cta" href="https://github.com/AudioLLMs/Awesome-Audio-LLM/blob/main/CONTRIBUTING.md">Contribute</a>
+        <a class="cta" href="https://github.com/AudioLLMs/Awesome-Audio-LLM/issues/new?template=add-paper.yml">Suggest a paper</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="Search and filters">
+      <input id="search" type="search" placeholder="Search title, author, affiliation, abbreviation…" autocomplete="off" />
+      <div class="filter-row" id="category-filter" aria-label="Filter by category"></div>
+      <div class="meta-row">
+        <span id="result-count" class="result-count"></span>
+        <label class="sort-label">
+          Sort:
+          <select id="sort">
+            <option value="time-desc">Newest first</option>
+            <option value="time-asc">Oldest first</option>
+            <option value="abbrev-asc">A → Z</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <p id="empty-state" class="empty-state" hidden>No entries match these filters.</p>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Maintained by <a href="https://github.com/BinWang28">@BinWang28</a> ·
+      Source on <a href="https://github.com/AudioLLMs/Awesome-Audio-LLM">GitHub</a> ·
+      Data: <a href="data.json">data.json</a>
+    </p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

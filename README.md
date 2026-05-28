@@ -1,4 +1,13 @@
-### 🌟🌟🌟 Find interesting work or want your work to be on-board? Raise an Issue or Pull Requests! :)
+# 🎧 audio-ai-hub
+
+**The hub for audio AI research.** Curated papers, open models, benchmarks and datasets across audio LLMs · speech recognition · speech synthesis · music & audio generation.
+
+`96 entries` · `11 categories` · `latest: 2025-12`
+
+👉 **[Interactive site (search & filter)](https://binwang28.github.io/audio-ai-hub/)** · **[Contribute](CONTRIBUTING.md)** · **[Suggest a paper](https://github.com/AudioLLMs/Awesome-Audio-LLM/issues/new?template=add-paper.yml)**
+
+---
+
 ## Contributors
 We thank the following contributors for their valuable contributions!
 [zwenyu](https://github.com/zwenyu), 
@@ -17,9 +26,12 @@ and You!
 - [Benchmark](#benchmark)
 - [Dataset Resource](#dataset-resource)
 - [Study](#study)
+- [Audio Generation](#audio-generation)
 - [Survey](#survey)
 - [Multimodal](#multimodal)
 - [Safety](#safety)
+- [Speech Synthesis](#speech-synthesis)
+- [Speech Recognition](#speech-recognition)
 - [Chatbot](#chatbot)
 
 <img src="model_release_timeline_vertical_listed.png" alt="Timeline Visualization" width="600">
@@ -53,6 +65,7 @@ and You!
 - [Taiwanese AudioLLM](https://arxiv.org/pdf/2411.07111)
 - [WavChat-Survey](https://arxiv.org/abs/2411.13577)
 - [DiVA](https://arxiv.org/pdf/2410.02678)
+- [F5-TTS](https://arxiv.org/abs/2410.06885)
 - [MMAU](https://arxiv.org/pdf/2410.19168)
 - [SPIRIT LM](https://arxiv.org/pdf/2402.05755)
 - [SpeechEmotionLlama](https://arxiv.org/pdf/2410.01162)
@@ -79,6 +92,7 @@ and You!
 - [GAMA](https://arxiv.org/abs/2406.11768)
 - [LLaST](https://arxiv.org/pdf/2407.15415)
 - [Qwen2-Audio](https://arxiv.org/pdf/2407.10759)
+- [Stable Audio Open](https://arxiv.org/abs/2407.14358)
 - [Audio Hallucination](https://arxiv.org/pdf/2406.08402)
 - [AudioBench](https://arxiv.org/abs/2406.16020)
 - [CodecFake](https://arxiv.org/abs/2406.07237)
@@ -105,10 +119,20 @@ and You!
 - [LLaSM](https://arxiv.org/pdf/2308.15930.pdf)
 - [LTU-AS](https://arxiv.org/abs/2309.14405)
 - [Segment-level Q-Former](https://arxiv.org/pdf/2309.13963)
+- [AudioLDM 2](https://arxiv.org/abs/2308.05734)
+- [SeamlessM4T](https://arxiv.org/abs/2308.11596)
 - [Prompting LLMs with Speech Recognition](https://arxiv.org/pdf/2307.11795)
+- [DAC](https://arxiv.org/abs/2306.06546)
 - [Macaw-LLM](https://arxiv.org/pdf/2306.09093)
+- [MusicGen](https://arxiv.org/abs/2306.05284)
+- [StyleTTS 2](https://arxiv.org/abs/2306.07691)
+- [MMS](https://arxiv.org/abs/2305.13516)
 - [SpeechGPT](https://arxiv.org/pdf/2305.11000.pdf)
 - [AudioGPT](https://arxiv.org/pdf/2304.12995.pdf)
+- [VALL-E](https://arxiv.org/abs/2301.02111)
+- [Whisper](https://arxiv.org/abs/2212.04356)
+- [EnCodec](https://arxiv.org/abs/2210.13438)
+- [AudioGen](https://arxiv.org/abs/2209.15352)
 
 ## Model and Methods
 
@@ -543,6 +567,43 @@ and You!
   - [![GitHub stars](https://img.shields.io/github/stars/kuan2jiu99/audio-hallucination?style=social)](https://github.com/kuan2jiu99/audio-hallucination)
   - [Paper](https://arxiv.org/pdf/2406.08402)
 
+## Audio Generation
+
+- `【2024-07】-【Stable Audio Open】-【Stability AI】-【Type: Audio Generation Model】`
+  - **Stable Audio Open**
+  - **Author(s):** Zach Evans, Julian D. Parker, CJ Carr, Zack Zukowski, Josiah Taylor, Jordi Pons
+  - [Paper](https://arxiv.org/abs/2407.14358) / [Hugging Face Model](https://huggingface.co/stabilityai/stable-audio-open-1.0)
+
+- `【2023-08】-【AudioLDM 2】-【University of Surrey, Imperial College London】-【Type: Audio Generation Model】`
+  - **AudioLDM 2: Learning Holistic Audio Generation with Self-supervised Pretraining**
+  - **Author(s):** Haohe Liu, Qiao Tian, Yi Yuan, Xubo Liu, Xinhao Mei, Qiuqiang Kong, Yuping Wang, Wenwu Wang, Yuxuan Wang, Mark D. Plumbley
+  - [![GitHub stars](https://img.shields.io/github/stars/haoheliu/AudioLDM2?style=social)](https://github.com/haoheliu/AudioLDM2)
+  - [Paper](https://arxiv.org/abs/2308.05734) / [Hugging Face Model](https://huggingface.co/cvssp/audioldm2) / [Demo](https://audioldm.github.io/audioldm2/)
+
+- `【2023-06】-【DAC】-【Descript】-【Type: Neural Audio Codec】`
+  - **High-Fidelity Audio Compression with Improved RVQGAN**
+  - **Author(s):** Rithesh Kumar, Prem Seetharaman, Alejandro Luebs, Ishaan Kumar, Kundan Kumar
+  - [![GitHub stars](https://img.shields.io/github/stars/descriptinc/descript-audio-codec?style=social)](https://github.com/descriptinc/descript-audio-codec)
+  - [Paper](https://arxiv.org/abs/2306.06546)
+
+- `【2023-06】-【MusicGen】-【Meta AI】-【Type: Music Generation Model】`
+  - **Simple and Controllable Music Generation**
+  - **Author(s):** Jade Copet, Felix Kreuk, Itai Gat, Tal Remez, David Kant, Gabriel Synnaeve, Yossi Adi, Alexandre Défossez
+  - [![GitHub stars](https://img.shields.io/github/stars/facebookresearch/audiocraft?style=social)](https://github.com/facebookresearch/audiocraft)
+  - [Paper](https://arxiv.org/abs/2306.05284) / [Hugging Face Model](https://huggingface.co/facebook/musicgen-large) / [Demo](https://huggingface.co/spaces/facebook/MusicGen)
+
+- `【2022-10】-【EnCodec】-【Meta AI】-【Type: Neural Audio Codec】`
+  - **High Fidelity Neural Audio Compression**
+  - **Author(s):** Alexandre Défossez, Jade Copet, Gabriel Synnaeve, Yossi Adi
+  - [![GitHub stars](https://img.shields.io/github/stars/facebookresearch/encodec?style=social)](https://github.com/facebookresearch/encodec)
+  - [Paper](https://arxiv.org/abs/2210.13438) / [Hugging Face Model](https://huggingface.co/facebook/encodec_24khz)
+
+- `【2022-09】-【AudioGen】-【Meta AI, Hebrew University of Jerusalem】-【Type: Audio Generation Model】`
+  - **AudioGen: Textually Guided Audio Generation**
+  - **Author(s):** Felix Kreuk, Gabriel Synnaeve, Adam Polyak, Uriel Singer, Alexandre Défossez, Jade Copet, Devi Parikh, Yaniv Taigman, Yossi Adi
+  - [![GitHub stars](https://img.shields.io/github/stars/facebookresearch/audiocraft?style=social)](https://github.com/facebookresearch/audiocraft)
+  - [Paper](https://arxiv.org/abs/2209.15352) / [Hugging Face Model](https://huggingface.co/facebook/audiogen-medium) / [Demo](https://felixkreuk.github.io/audiogen/)
+
 ## Survey
 
 - `【2024-11】-【WavChat-Survey】-【Zhejiang University】-【Type: Survey】`
@@ -597,6 +658,46 @@ and You!
   - **Author(s):** Xinyue Shen, Yixin Wu, Michael Backes, Yang Zhang
   - [![GitHub stars](https://img.shields.io/github/stars/TrustAIRLab/VoiceJailbreakAttack?style=social)](https://github.com/TrustAIRLab/VoiceJailbreakAttack)
   - [Paper](https://arxiv.org/pdf/2405.19103)
+
+## Speech Synthesis
+
+- `【2024-10】-【F5-TTS】-【Shanghai Jiao Tong University】-【Type: TTS Model】`
+  - **F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching**
+  - **Author(s):** Yushen Chen, Zhikang Niu, Ziyang Ma, Keqi Deng, Chunhui Wang, Jian Zhao, Kai Yu, Xie Chen
+  - [![GitHub stars](https://img.shields.io/github/stars/SWivid/F5-TTS?style=social)](https://github.com/SWivid/F5-TTS)
+  - [Paper](https://arxiv.org/abs/2410.06885) / [Hugging Face Model](https://huggingface.co/SWivid/F5-TTS) / [Demo](https://swivid.github.io/F5-TTS/)
+
+- `【2023-06】-【StyleTTS 2】-【Columbia University】-【Type: TTS Model】`
+  - **StyleTTS 2: Towards Human-Level Text-to-Speech through Style Diffusion and Adversarial Training with Large Speech Language Models**
+  - **Author(s):** Yinghao Aaron Li, Cong Han, Vinay S. Raghavan, Gavin Mischler, Nima Mesgarani
+  - [![GitHub stars](https://img.shields.io/github/stars/yl4579/StyleTTS2?style=social)](https://github.com/yl4579/StyleTTS2)
+  - [Paper](https://arxiv.org/abs/2306.07691) / [Hugging Face Model](https://huggingface.co/spaces/styletts2/styletts2) / [Demo](https://styletts2.github.io/)
+
+- `【2023-01】-【VALL-E】-【Microsoft】-【Type: TTS Model】`
+  - **Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers**
+  - **Author(s):** Chengyi Wang, Sanyuan Chen, Yu Wu, Ziqiang Zhang, Long Zhou, Shujie Liu, Zhuo Chen, Yanqing Liu, Huaming Wang, Jinyu Li, Lei He, Sheng Zhao, Furu Wei
+  - [![GitHub stars](https://img.shields.io/github/stars/master/valle?style=social)](https://github.com/microsoft/unilm/tree/master/valle)
+  - [Paper](https://arxiv.org/abs/2301.02111) / [Demo](https://www.microsoft.com/en-us/research/project/vall-e-x/)
+
+## Speech Recognition
+
+- `【2023-08】-【SeamlessM4T】-【Meta AI】-【Type: Speech Translation Model】`
+  - **SeamlessM4T: Massively Multilingual & Multimodal Machine Translation**
+  - **Author(s):** Seamless Communication Team (Loïc Barrault, Yu-An Chung, Mariano Coria Meglioli, et al.)
+  - [![GitHub stars](https://img.shields.io/github/stars/facebookresearch/seamless_communication?style=social)](https://github.com/facebookresearch/seamless_communication)
+  - [Paper](https://arxiv.org/abs/2308.11596) / [Hugging Face Model](https://huggingface.co/facebook/seamless-m4t-v2-large) / [Demo](https://seamless.metademolab.com/)
+
+- `【2023-05】-【MMS】-【Meta AI】-【Type: Speech Recognition Model】`
+  - **Scaling Speech Technology to 1,000+ Languages**
+  - **Author(s):** Vineel Pratap, Andros Tjandra, Bowen Shi, Paden Tomasello, Arun Babu, Sayani Kundu, Ali Elkahky, Zhaoheng Ni, Apoorv Vyas, Maryam Fazel-Zarandi, Alexei Baevski, Yossi Adi, Xiaohui Zhang, Wei-Ning Hsu, Alexis Conneau, Michael Auli
+  - [![GitHub stars](https://img.shields.io/github/stars/examples/mms?style=social)](https://github.com/facebookresearch/fairseq/tree/main/examples/mms)
+  - [Paper](https://arxiv.org/abs/2305.13516) / [Hugging Face Model](https://huggingface.co/facebook/mms-1b-all)
+
+- `【2022-12】-【Whisper】-【OpenAI】-【Type: Speech Recognition Model】`
+  - **Robust Speech Recognition via Large-Scale Weak Supervision**
+  - **Author(s):** Alec Radford, Jong Wook Kim, Tao Xu, Greg Brockman, Christine McLeavey, Ilya Sutskever
+  - [![GitHub stars](https://img.shields.io/github/stars/openai/whisper?style=social)](https://github.com/openai/whisper)
+  - [Paper](https://arxiv.org/abs/2212.04356) / [Hugging Face Model](https://huggingface.co/openai/whisper-large-v3)
 
 ## Chatbot
 

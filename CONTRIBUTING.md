@@ -1,21 +1,24 @@
-# Contributing to Awesome-Audio-LLM
+# Contributing to audio-ai-hub
 
-Thanks for wanting to add a paper, model, or benchmark to the list! `README.md` is **generated** from JSON files in `items/` by `format_input.py`, so the contribution workflow is JSON-first, not README-first.
+Thanks for wanting to add a paper, model, or benchmark to the hub! `README.md` is **generated** from JSON files in `items/` by `format_input.py`, so the contribution workflow is JSON-first, not README-first.
 
 ## Scope
 
-This list focuses on **audio-LLM research artifacts**:
+This hub covers **audio AI research artifacts** across the modern audio stack:
 
-- Papers and technical reports (audio/speech foundation models, audio-language models, multimodal LLMs with an audio modality)
-- Open model releases (HuggingFace, GitHub) tied to research
-- Benchmarks and datasets for audio LLMs
-- Surveys, safety and evaluation studies in the audio-LLM space
+- Audio LLMs and multimodal LLMs with an audio modality (understanding, reasoning, dialogue)
+- Speech recognition / speech-to-speech translation foundation models
+- Speech synthesis (TTS, voice cloning) and music / audio generation models
+- Neural audio codecs underpinning the above
+- Benchmarks, datasets, surveys, and safety / evaluation studies in any of the above areas
+
+Each entry should have **a paper or an open model release** behind it. The list deliberately stays research-oriented.
 
 Out of scope:
 
 - Commercial products without an associated paper or open model
-- General TTS/STT tools, voice assistants, and consumer apps unrelated to LLM research
-- SEO/promotional submissions
+- Voice assistants, voice-agent SaaS, and consumer apps unrelated to research
+- SEO / promotional submissions
 
 ## How to add a new item
 
