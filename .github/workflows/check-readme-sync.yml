@@ -22,9 +22,6 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install deps
-        run: pip install matplotlib==3.10.0 numpy==2.1.3
-
       - name: Regenerate README.md + docs/index.html + docs/data.json and diff
         run: |
           python3 format_input.py

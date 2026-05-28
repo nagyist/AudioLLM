@@ -56,23 +56,22 @@ Field conventions:
 - **`Audio_Input` / `Audio_Output`** — `Yes` or `No`. Used for the timeline annotation.
 - **`Language`** — `English`, `Multilingual`, a specific language name, or empty.
 
-### 2. Regenerate `README.md` and the timeline image
+### 2. Regenerate the README and site data
 
 ```bash
 python3 format_input.py
 ```
 
-This rewrites `README.md` and `model_release_timeline_vertical_listed.png` from all `items/*.json` files. Commit the regenerated files alongside your new JSON.
+This rewrites `README.md`, `docs/data.json` (the live site's data feed), and `docs/index.html` (server-rendered card grid). Commit all three alongside your new JSON.
 
 ### 3. Open a pull request
 
 Include in the PR:
 
 - the new `items/<Abbreviation>.json`
-- the regenerated `README.md`
-- the regenerated `model_release_timeline_vertical_listed.png`
+- the regenerated `README.md`, `docs/data.json`, and `docs/index.html`
 
-A README-only PR cannot be merged cleanly — the next regeneration would erase the change. PRs that include the JSON file are easy to merge.
+A README-only PR cannot be merged — the `check-readme` CI workflow re-runs `format_input.py` and fails if your changes don't match. JSON-first PRs sail through.
 
 ## Suggesting an item without filing a PR
 
