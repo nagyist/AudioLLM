@@ -90,13 +90,25 @@ def already_suggested_ids(repo: str) -> set[str]:
     return out
 
 
+USER_AGENT = (
+    "audio-ai-hub-watcher/1.0 "
+    "(+https://github.com/BinWang28/audio-ai-hub; contact: bwang28c@gmail.com)"
+)
+
+
 def _arxiv_get(url: str, max_retries: int = 4) -> str:
-    """GET arxiv URL with exponential backoff on 429 / timeout / 5xx."""
+    """GET arxiv URL with exponential backoff on 429 / timeout / 5xx.
+
+    arXiv asks API consumers to set a descriptive User-Agent including a
+    contact address; doing so substantially reduces 429 risk on shared
+    cloud runners.
+    """
     delay = 5
     last_exc = None
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     for attempt in range(1, max_retries + 1):
         try:
-            with urllib.request.urlopen(url, timeout=45) as r:
+            with urllib.request.urlopen(req, timeout=45) as r:
                 return r.read().decode("utf-8", errors="replace")
         except urllib.error.HTTPError as e:
             last_exc = e
